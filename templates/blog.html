@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="static\images\icons\favicon.png"/>
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="static\css\main.css">
+    <script src="static\js\animate.js"></script>
+    <script src="static\js\main.js"></script>
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light shadow-sm px-4 fixed-top" style="background-color: lightcyan;">
+        <a href="#" class="logo">
+            <img src="static\images\icons\logo-01.png" alt="IMG-LOGO" style="height: 20px;">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop">Shop</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/features">Features</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/blog">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="container-fluid p-0 position-relative ">
+        <img src="static\images\bg-02.jpg" class="w-100" style="height: 200px; object-fit: cover; 
+            margin-top: -22px;">
+        <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
+            <h1 class="display-3 fw-bold" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.6); font-family: 'Poppins', sans-serif;">
+                Blog
+            </h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row pt-5">
+
+            <div class="col-lg-9 col-12">
+                <div class="blog-post position-relative mb-4 overflow-hidden">
+                    <img src="static\images\blog-01.jpg" alt="Blog Image" class="img-fluid blog-img" />
+                    <div class="date-box position-absolute top-0 start-0 bg-light text-dark text-center px-2 py-1 m-2 shadow-sm">
+                        <div class="fs-4">22</div>
+                        <small>Jan 2018</small>
+                    </div>
+                </div>
+                <h3 class="mt-2 fw-bold">8 Inspiring Ways to Wear Dresses in the Winter</h3>
+                <p class="text-muted">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius</p>
+                <div class="d-flex justify-content-between mb-4">
+                    <small class="text-muted">By Admin | StreetStyle, Fashion, Couple | 8 Comments</small>
+                    <a href="#" class="btn pb-5">Continue Reading →</a>
+                </div>
+
+
+
+
+                <div class="blog-post position-relative mb-4 overflow-hidden">
+                    <img src="static\images\blog-02.jpg" alt="Blog Image" class="img-fluid blog-img" />
+                    <div class="date-box position-absolute top-0 start-0 bg-light text-dark text-center px-2 py-1 m-2 shadow-sm">
+                        <div class="fs-4">18</div>
+                        <small>Jan 2018</small>
+                    </div>
+                </div>
+                <h3 class="mt-2 fw-bold">The Great Big List of Men’s Gifts for the Holidays</h3>
+                <p class="text-muted">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce eget dictum tortor. Donec dictum vitae sapien eu varius</p>
+                <div class="d-flex justify-content-between mb-4">
+                    <small class="text-muted">By Admin | StreetStyle, Fashion, Couple | 8 Comments</small>
+                    <a href="#" class="btn pb-5">Continue Reading →</a>
+                </div>
+
+
+
+                <div class="blog-post position-relative mb-4 overflow-hidden">
+                    <img src="static\images\blog-03.jpg" alt="Blog Image" class="img-fluid blog-img" />
+                    <div class="date-box position-absolute top-0 start-0 bg-light text-dark text-center px-2 py-1 m-2 shadow-sm">
+                        <div class="fs-4">22</div>
+                        <small>Jan 2018</small>
+                    </div>
+                </div>
+                <h3 class="mt-2 fw-bold">5 Winter-to-Spring Fashion Trends to Try Now</h3>
+                <p class="text-muted">Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
+                <div class="d-flex justify-content-between mb-4">
+                    <small class="text-muted">By Admin | StreetStyle | 8 Comments</small>
+                    <a href="#" class="btn pb-3">Continue Reading →</a>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3 col-12 sidebar-section mt-4 mt-lg-0">
+                <div class="mb-4 p-2">
+                    <form class="d-flex border rounded-pill p-2">
+                        <input type="text" class="form-control border-0" placeholder="Search" />
+                        <button class="btn"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+                <div class="mb-4 pt-4 p-2">
+                    <h5 class="fw-bold pb-3">Categories</h5>
+                    <ul class="list-unstyled category">
+                        <li>
+                            <a href="#" class="d-block py-1 text-muted border-bottom"></a>
+                        </li>
+
+                        <li><a href="#" class="d-block py-1 pt-2 pb-2 text-muted border-bottom" style="text-decoration: none;">Fashion</a></li>
+
+                        <li><a href="#" class="d-block py-1 pt-2 pb-2 text-muted border-bottom" style="text-decoration: none;">Beauty</a></li>
+
+                        <li><a href="#" class="d-block py-1 pt-2 pb-2 text-muted border-bottom" style="text-decoration: none;">Street Style</a></li>
+
+                        <li><a href="#" class="d-block py-1 pt-2 pb-2 text-muted border-bottom" style="text-decoration: none;">Life Style</a></li>
+
+                        <li><a href="#" class="d-block py-1 pt-2 pb-2 text-muted border-bottom" style="text-decoration: none;">DIY & Crafts</a></li>
+                    </ul>
+                </div>
+
+                <div class="mb-4 p-2">
+                    <h5 class="fw-bold pt-5 pb-4">Featured Products</h5>
+
+
+                    <div class="featured-product d-flex mb-5">
+                        <div class="featured-img me-2" style="background-image: url('images/product-min-01.jpg');">
+                        </div>
+                        <div>
+                            <div class="featured-product-title">White Shirt With Pleat Detail Back</div>
+                            <small>$19.00</small>
+                        </div>
+                    </div>
+
+
+                    <div class="featured-product d-flex mb-5">
+                        <div class="featured-img me-2" style="background-image: url('images/product-min-02.jpg');">
+                        </div>
+                        <div>
+                            <div class="featured-product-title">Converse All Star Hi Black Canvas</div>
+                            <small>$39.00</small>
+                        </div>
+                    </div>
+
+
+
+                    <div class="featured-product d-flex mb-5">
+                        <div class="featured-img me-2" style="background-image: url('images/product-min-03.jpg');">
+                        </div>
+                        <div>
+                            <div class="featured-product-title">Nixon Porter Leather Watch In Tan</div>
+                            <small>$17.00</small>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="mb-4 pt-4 p-2">
+                        <h5 class="fw-bold pb-3" style="font-size: 25px;">Archive</h5>
+                        <ul class="list-unstyled archive-section">
+
+                            <li class="py-1 pt-2 pb-2">
+                                <a href="#" class="d-flex justify-content-between text-muted text-decoration-none">
+                                    <span>July 2018</span>
+                                    <span>(9)</span>
+                                </a>
+                            </li>
+
+
+                            <li class="py-1 pt-2 pb-2">
+                                <a href="#" class="d-flex justify-content-between text-muted text-decoration-none">
+                                    <span>June 2018</span>
+                                    <span>(39)</span>
+                                </a>
+                            </li>
+
+
+                            <li class="py-1 pt-2 pb-2">
+                                <a href="#" class="d-flex justify-content-between text-muted text-decoration-none">
+                                    <span>May 2018</span>
+                                    <span>(29)</span>
+                                </a>
+                            </li>
+
+
+                            <li class="py-1 pt-2 pb-2">
+                                <a href="#" class="d-flex justify-content-between text-muted text-decoration-none">
+                                    <span>April 2018</span>
+                                    <span>(35)</span>
+                                </a>
+                            </li>
+
+
+                            <li class="py-1 pt-2 pb-2">
+                                <a href="#" class="d-flex justify-content-between text-muted text-decoration-none">
+                                    <span>March 2018</span>
+                                    <span>(22)</span>
+                                </a>
+                            </li>
+
+
+                            <li class="py-1 pt-2 pb-2">
+                                <a href="#" class="d-flex justify-content-between text-muted text-decoration-none">
+                                    <span>February 2018</span>
+                                    <span>(32)</span>
+                                </a>
+                            </li>
+
+
+                            <li class="py-1 pt-2 pb-2">
+                                <a href="#" class="d-flex justify-content-between text-muted text-decoration-none">
+                                    <span>January 2018</span>
+                                    <span>(21)</span>
+                                </a>
+                            </li>
+
+
+                            <li class="py-1 pt-2 pb-2">
+                                <a href="#" class="d-flex justify-content-between text-muted text-decoration-none">
+                                    <span>December 2017</span>
+                                    <span>(26)</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+
+
+                    <div class="mb-2 pt-5 p-2">
+                        <h5 class="fw-bold pb-4">Tags</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#" class="tag">Fashion</a>
+                            <a href="#" class="tag">Lifestyle</a>
+                            <a href="#" class="tag">Denim</a>
+                            <a href="#" class="tag">Streetstyle</a>
+                            <a href="#" class="tag">Crafts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer class="bg-dark text-white pt-4 pb-3 mt-5">
+        <div class="container">
+            <div class="row text-start">
+                <div class="col-6 col-md-3 mb-4">
+                    <h6 class="fw-bold text-uppercase">Categories</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Women</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Men</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Shoes</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Watches</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <h6 class="fw-bold text-uppercase">Help</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Track Order</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Returns</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Shipping</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <h6 class="fw-bold text-uppercase">Get In Touch</h6>
+                    <p class="text-white-50">Any questions? Let us know at 8th floor, 379 Hudson St, NY 10018 or call us on (+1) 96 716 6879</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 mb-4">
+                    <h6 class="fw-bold text-uppercase">Newsletter</h6>
+                    <form class="d-flex flex-column gap-2">
+                        <input type="email" class="form-control bg-dark text-white border-bottom rounded-0" placeholder="email@example.com">
+                        <button type="submit" class="btn btn-primary rounded-pill fw-bold">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center my-3">
+                <img src="static\images\icons\icon-pay-01.png" alt="Payment" class="img-fluid" style="max-width: 60px;">
+                <img src="static\images\icons\icon-pay-02.png" alt="Payment" class="img-fluid" style="max-width: 60px;">
+                <img src="static\images\icons\icon-pay-03.png" alt="Payment" class="img-fluid" style="max-width: 60px;">
+                <img src="static\images\icons\icon-pay-04.png" alt="Payment" class="img-fluid" style="max-width: 60px;">
+                <img src="static\images\icons\icon-pay-05.png" alt="Payment" class="img-fluid" style="max-width: 60px;">
+            </div>
+            <div class="text-center text-white-50 small">Copyright @2025 All rights reserved</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="static\images\icons\favicon.png"/>
+        <title>Shop</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="static/css/main.css">
+        <script src="static/js/main.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/animate.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+        <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light shadow-sm px-4 fixed-top" style="background-color: lightcyan;">
+            <a href="#" class="logo">
+                <img src="static\images\icons\logo-01.png" alt="IMG-LOGO" style="height: 20px;">
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/shop">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex gap-2">
+                <a href="/cart" class="icon-badge position-relative" style="padding-top: 10px;">
+                    <i class="fa fa-shopping-cart fs-5"></i>
+                    <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </a>
+                <a href="/wishlist" class="icon-badge position-relative" style="padding-top: 10px;">
+                    <i class="fa fa-heart fs-5"></i>
+                    <span id="wishlistCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                </a>
+            </div>
+        </nav>
+        <div class="container py-5">
+            <h1 class="fw-bold mb-4">PRODUCT OVERVIEW</h1>
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-filter="all">All Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="women">Women</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="men">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="belt">Belt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="shoes">Shoes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="watches">Watches</a>
+                    </li>
+                </ul>
+                <div class="action-buttons">
+                    <button class="btn btn-outline-secondary">
+                        <i class="bi bi-funnel"></i> Filter
+                    </button>
+                    <button class="btn btn-outline-secondary">
+                        <i class="bi bi-search"></i> Search
+                    </button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="women">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Libas Off White Printed Cotton A-Line Kurta With Palazzos & Dupatta"
+                            data-price="₹1,500"
+                            data-main-img="static/images/store/1.jpg"
+                            data-thumbs='["static/images/store/1.jpg", "static/images/store/2.jpg", "static/images/store/3.jpg", "static/images/store/4.jpg", "static/images/store/5.jpg"]'
+                            data-details='["Length: Calf Length","Sleeve: Long Sleeve","Neck: V Neck","Style: A-Line","Material: Cotton","Design: Printed","Country of Origin: India"]'
+                        >
+                            <img src="static/images/store/1.jpg" alt="Product 1" class="product-img img-fluid w-100">
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">Libas Off White Printed Cotton A-Line Kurta With Palazzos & Dupatta</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹1,500</p>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="women">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Bewakoof Women Cotton Graphic Oversized Fit T-Shirt"
+                            data-price="₹699"
+                            data-main-img="static/images/store/6.jpg"
+                            data-thumbs='["static/images/store/6.jpg", "static/images/store/7.jpg", "static/images/store/8.jpg", "static/images/store/9.jpg"]'
+                            data-details='["Material composition : 100% Cotton","Fit type : Oversized Fit","Sleeve type : Short Sleeve","Neck style : Crew Neck","Style : Modern","Closure type : Pull On","Country of Origin: India"]'
+                        >
+                            <img src="static/images/store/6.jpg" alt="Product 2" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">Bewakoof Women Cotton Graphic Oversized Fit T-Shirt</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹699</p>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="men">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Peter England Men's Snug Fit Solid Polo T-Shirt with Coloured Collar Tipping| Cotton Rich| Premium Pique Weave"
+                            data-price="₹499"
+                            data-main-img="static/images/store/10.jpg"
+                            data-thumbs='["static/images/store/10.jpg", "static/images/store/11.jpg", "static/images/store/12.jpg", "static/images/store/13.jpg", "static/images/store/14.jpg"]'
+                            data-details='["Material composition : 60% Cotton, 40% Polyester","Pattern : Solid", "Fit type : Slim Fit","Sleeve type : Half Sleeve","Collar style : Polo Collar","Style : Modern","Length : Standard Length","Country of Origin: India"]'
+                        >
+                            <img src="static/images/store/10.jpg" alt="Product 2" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">
+                                Peter England Men's Snug Fit Solid Polo T-Shirt with Coloured Collar Tipping| Cotton Rich| Premium Pique Weave
+                            </p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹499</p>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="women">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Harpa Women Standard Length Dress"
+                            data-price="₹699"
+                            data-main-img="static/images/store/15.jpg"
+                            data-thumbs='["static/images/store/15.jpg", "static/images/store/16.jpg", "static/images/store/17.jpg", "static/images/store/18.jpg"]'
+                            data-details='["Material type : Crepe","Fit type : Midi","Occasion type : Party, Graduation, Prom Homecoming, Thanksgiving","Sleeve type : Short Sleeve","Pattern : Floral","Style : A-Line","Country of Origin : India"]'
+                        >
+                            <img src="static/images/store/15.jpg" alt="Product 2 " class="product-img img-fluid w-100 ">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm ">
+                                Quick View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1 ">
+                            <p class="product-name mb-0 mt-1 ms-2 ">Harpa Women Standard Length Dress</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3 ">₹699</p>
+                    </div>
+
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="women">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="AKHILAM Women's Bagh Silk Blend Woven Design Saree With Unstitched Blouse Piece (Pink_13PAKHI1403)"
+                            data-price="₹1,099"
+                            data-main-img="static/images/store/19.jpg"
+                            data-thumbs='["static/images/store/19.jpg", "static/images/store/20.jpg", "static/images/store/21.jpg", "static/images/store/22.jpg"]'
+                            data-details='["Material composition : Silk Blend","Weave type : Plain","Design name : Woven","Length : 6 yards","Occasion type : Festival, Wedding, Party","Pattern : Bagh"]'
+                        >
+                            <img src="static/images/store/19.jpg" alt="Product 1" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">AKHILAM Women's Bagh Silk Blend Woven Design Saree With Unstitched Blouse Piece (Pink_13PAKHI1403)</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹1,099</p>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="men">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Majestic Man Slim Fit Cotton Casual Check Shirt for Men"
+                            data-price="₹529"
+                            data-main-img="static/images/store/23.jpg"
+                            data-thumbs='["static/images/store/23.jpg", "static/images/store/24.jpg", "static/images/store/25.jpg", "static/images/store/26.jpg"]'
+                            data-details='["Material composition : Pure Cotton", "Pattern : Checkered", "Fit type : Slim Fit","Sleeve type : Long Sleeve","Collar style : Spread Collar","Length : Standard Length","Country of Origin: India"]'
+                        >
+                            <img src="static/images/store/23.jpg" alt="Product 2" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">Majestic Man Slim Fit Cotton Casual Check Shirt for Men</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹529</p>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="shoes">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="ASIAN Men's Wonder-13 Sports Running Shoes"
+                            data-price="₹626"
+                            data-main-img="static/images/store/27.jpg"
+                            data-thumbs='["static/images/store/27.jpg", "static/images/store/28.jpg", "static/images/store/29.jpg"]'
+                            data-details='["Material type : Mesh","Closure type : Lace-Up", "Heel type : Flat","Water resistance level : Not Water Resistant","Sole material : Ethylene Vinyl Acetate","Style : Sneaker","Country of Origin: India"]'
+                        >
+                            <img src="static/images/store/27.jpg" alt="Product 2" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">ASIAN Men's Wonder-13 Sports Running Shoes</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹626</p>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="women">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="SIVANI CRAFTS Women's Cotton Anarkali Embroidery Designer Long Anarkali Kurti With Pant and Dupatta Set (Red)"
+                            data-price="₹1,499"
+                            data-main-img="static/images/store/87.jpg"
+                            data-thumbs='["static/images/store/87.jpg", "static/images/store/88.jpg", "static/images/store/89.jpg", "static/images/store/90.jpg", "static/images/store/91.jpg", "static/images/store/92.jpg"]'
+                            data-details='["Material type : Cotton Blend","Fit type : Regular","Style : Regular","Theme : Occasion","Closure type : Pull On","Care instructions : Machine Wash","Country of Origin : India"]'
+                        >
+                            <img src="static/images/store/87.jpg" alt="Product 2 " class="product-img img-fluid w-100 ">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm ">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1 ">
+                            <p class="product-name mb-0 mt-1 ms-2 ">SIVANI CRAFTS Women's Cotton Anarkali Embroidery Designer Long Anarkali Kurti With Pant and Dupatta Set (Red)</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3 ">₹1,499</p>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="watches">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Sonata Linnea Rose Gold Dial Women Analog Watch with Stainless Steel Strap-NR8174WM02"
+                            data-price="₹1,999"
+                            data-main-img="static/images/store/30.jpg"
+                            data-thumbs='["static/images/store/31.jpg", "static/images/store/32.jpg", "static/images/store/33.jpg", "static/images/store/34.jpg"]'
+                            data-details='["Case diameter : 38 Millimetres","Band colour : Rose Gold","Band material type : Metal","Watch movement type : Quartz","Case thickness : 7.15 Millimetres","Band width : 19 Millimetres"]'
+                        >
+                            <img src="static/images/store/30.jpg" alt="Product 1" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">Sonata Linnea Rose Gold Dial Women Analog Watch with Stainless Steel Strap-NR8174WM02</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹1,999</p>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="belt">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Labnoft Men's Auto Lock PU Leather Belt"
+                            data-price="₹657"
+                            data-main-img="static/images/store/35.jpg"
+                            data-thumbs='["static/images/store/35.jpg", "static/images/store/36.jpg", "static/images/store/37.jpg", "static/images/store/38.jpg", "static/images/store/39.jpg"]'
+                            data-details='["Material type : Faux Leather", "Closure type : Buckle", "Occasion type : Formal","Care instructions : Wet Wipe Clean","Country of Origin: India"]'>
+                            <img src="static/images/store/35.jpg" alt="Product 2" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">Labnoft Men's Auto Lock PU Leather Belt</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹657</p>
+                    </div>
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="shoes">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Metro Women's Faux Leather Formal Block Heel Fashion Sandals"
+                            data-price="₹1,026"
+                            data-main-img="static/images/store/40.jpg"
+                            data-thumbs='["static/images/store/40.jpg", "static/images/store/41.jpg", "static/images/store/42.jpg", "static/images/store/43.jpg", "static/images/store/44.jpg" ]'
+                            data-details='["Material type : Synthetic","Closure type : Slip On","Heel type : Block Heel","Water resistance level : Not Water Resistant","Style : Fashion Sandal",
+                            "Strap type : Heel Type","Country of Origin : India"]'>
+                            <img src="static/images/store/40.jpg" alt="Product 2" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">Metro Women's Faux Leather Formal Block Heel Fashion Sandals</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹1,026</p>
+                    </div>
+
+
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="shoes">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Puma Women Tori Pixie Sneaker"
+                            data-price="₹2,475"
+                            data-main-img="static/images/store/45.jpg"
+                            data-thumbs='["static/images/store/45.jpg", "static/images/store/46.jpg", "static/images/store/47.jpg", "static/images/store/48.jpg", "static/images/store/49.jpg"]'
+                            data-details='["Material type : Rubber","Closure type : Lace-Up","Heel type : Flat","Water resistance level : Not Water Resistant","Sole material : Rubber","Style : Sneaker","Country of Origin : China"]'
+                        >
+                            <img src="static/images/store/45.jpg" alt="Product 2 " class="product-img img-fluid w-100 ">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm ">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1 ">
+                            <p class="product-name mb-0 mt-1 ms-2 ">Puma Women Tori Pixie Sneaker</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3 ">₹2,475</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="women">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Levi's Women's High Rise 724 Slim Straight Fit Blue Jeans"
+                            data-price="₹1,259"
+                            data-main-img="static/images/store/54.jpg"
+                            data-thumbs='["static/images/store/54.jpg", "static/images/store/55.jpg", "static/images/store/56.jpg", "static/images/store/57.jpg"]'
+                            data-details='["Material type : Cotton","Style : Classic","Closure type : Button","Care instructions : Machine Wash","Fit type : Fitted","Pattern : Solid", "Country of Origin : India"]'
+                        >
+                            <img src="static/images/store/54.jpg" alt="Product 1" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">
+                                Levi's Women's High Rise 724 Slim Straight Fit Blue Jeans
+                            </p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹1,259</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="shoes">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Louis Philippe Men Leather Formal Shoes"
+                            data-price="₹1,827"
+                            data-main-img="static/images/store/50.jpg"
+                            data-thumbs='["static/images/store/51.jpg", "static/images/store/52.jpg", "static/images/store/53.jpg"]'
+                            data-details='["Material type : Leather", "Closure type : Lace-Up", "Heel type : No Heel","Water resistance level : Not Water Resistant","Sole material : Leather","Style : Derby","Country of Origin: India"]'
+                        >
+                            <img src="static/images/store/50.jpg" alt="Product 2" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">Louis Philippe Men Leather Formal Shoes</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹1,827</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="women">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="NYRIKA Women Floral Straight Kurta"
+                            data-price="₹240"
+                            data-main-img="static/images/store/62.jpg"
+                            data-thumbs='["static/images/store/62.jpg", "static/images/store/63.jpg", "static/images/store/64.jpg", "static/images/store/65.jpg", "static/images/store/66.jpg" ]'
+                            data-details='["Neckline : Round","Package contains: 1 kurta", "Wash Care : Machine wash","Fabric Detail : Rayon","Fitting : No Darts"]'
+                        >
+                            <img src="static/images/store/62.jpg" alt="Product 2" class="product-img img-fluid w-100">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1">
+                            <p class="product-name mb-0 mt-1 ms-2">NYRIKA Women Floral Straight Kurta</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3">₹240</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="men">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="XYXX Men's Nova 100% Combed Cotton Regular Fit Polo T-Shirt"
+                            data-price="₹529"
+                            data-main-img="static/images/store/58.jpg"
+                            data-thumbs='["static/images/store/58.jpg", "static/images/store/59.jpg", "static/images/store/60.jpg", "static/images/store/61.jpg"]'
+                            data-details='["Material composition : 100% Combed Cotton","Pattern : Solid","Fit type : Regular Fit","Sleeve type : Half Sleeve","Collar style : Polo Collar","Length : Standard Length","Country of Origin : Bangladesh"]'
+                        >
+                            <img src="static/images/store/58.jpg" alt="Product 2 " class="product-img img-fluid w-100 ">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm ">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1 ">
+                            <p class="product-name mb-0 mt-1 ms-2 ">
+                                XYXX Men's Nova 100% Combed Cotton Regular Fit Polo T-Shirt
+                            </p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3 ">₹529</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item" data-category="women">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center"
+                            data-title="Shein Women Floral Print Peplum Fitted Top"
+                            data-price="₹503"
+                            data-main-img="static/images/store/67.jpg"
+                            data-thumbs='["static/images/store/67.jpg", "static/images/store/68.jpg", "static/images/store/69.jpg", "static/images/store/70.jpg", "static/images/store/71.jpg","static/images/store/72.jpg"]'
+                            data-details='["Model Chest Size : 32","Package Contains : 1 Womens Top","Wash Care : Machine wash warm","Neckline : V-neck ","Length : Short "]'
+                        >
+                            <img src="static/images/store/67.jpg" alt="Product 1 " class="product-img img-fluid w-100 ">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm ">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2 ">
+                                <i class="fa fa-heart "></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1 ">
+                            <p class="product-name mb-0 mt-1 ms-2 ">Shein Women Floral Print Peplum Fitted Top</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3 ">₹503</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item " data-category="watches">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center "
+                            data-title="Men Analogue Wrist Watch with Tang Buckle Closure-DHM1001"
+                            data-price="₹2,699 "
+                            data-main-img="static/images/store/73.jpg"
+                            data-thumbs='["static/images/store/73.jpg", "static/images/store/74.jpg", "static/images/store/75.jpg", "static/images/store/76.jpg", "static/images/store/77.jpg"]'
+                            data-details='["Care : Clean the dial with a cotton cloth", "Strap Material : Silicone", "Strap Width : 24 mm","Dial Height : 42 mm","Package Contains : 1 watch","Dial Width : 24mm"]'
+                        >
+                            <img src="static/images/store/73.jpg" alt="Product 2 " class="product-img img-fluid w-100 ">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm ">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2 ">
+                                <i class="fa fa-heart "></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1 ">
+                            <p class="product-name mb-0 mt-1 ms-2 ">Men Analogue Wrist Watch with Tang Buckle Closure-DHM1001</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3 ">₹2,699</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item " data-category="watches">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center "
+                            data-title="styledose Women Analogue Wrist Watches for Women's & Girls&Miss&Ladies Diamond Studded Dial Rosegold Colored Stylish Bracelet Strap"
+                            data-price="₹358"
+                            data-main-img="static/images/store/81.jpg"
+                            data-thumbs='["static/images/store/81.jpg", "static/images/store/82.jpg", "static/images/store/83.jpg", "static/images/store/84.jpg", "static/images/store/85.jpg", "static/images/store/86.jpg" ]'
+                            data-details='["Neckline : Round ","Package contains: 1 kurta ", "Wash Care : Machine wash ","Fabric Detail : Rayon ","Fitting : No Darts "]'
+                        >
+                            <img src="static/images/store/81.jpg" alt="Product 2 " class="product-img img-fluid w-100 ">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm ">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2 ">
+                                <i class="fa fa-heart "></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1 ">
+                            <p class="product-name mb-0 mt-1 ms-2 ">styledose Women Analogue Wrist Watches for Women's & Girls&Miss&Ladies Diamond Studded Dial Rosegold Colored Stylish Bracelet Strap</p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3 ">₹358</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 product-item " data-category="belt">
+                        <div
+                            class="product-card position-relative overflow-hidden text-center "
+                            data-title="Shining Diva Fashion Leather Belts For Women And Girls 4 Pcs Combo Stylish Waist Belt For Dresses Jeans (16071Lb)"
+                            data-price="₹521"
+                            data-main-img="static/images/store/78.jpg"
+                            data-thumbs='["static/images/store/78.jpg", "static/images/store/79.jpg", "static/images/store/80.jpg"] '
+                            data-details='[ "Item width : 20 Millimeters", "Material : Leather", "Metal type : No Metal Type", "Gem type : No Gemstone", "Item type name : Waist Belt", "Country of Origin : Bangladesh"] '
+                        >
+                            <img src="static/images/store/78.jpg" alt="Product 2 " class="product-img img-fluid w-100 ">
+                            <button class="quick-view-btn position-absolute bottom-0 start-50 translate-middle-x mb-2 btn btn-light btn-sm ">
+                                Quick
+                                View
+                            </button>
+                            <button class="heart-btn btn btn-outline-danger position-absolute top-0 end-0 m-2">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1 px-1 ">
+                            <p class="product-name mb-0 mt-1 ms-2 ">
+                                Shining Diva Fashion Leather Belts For Women And Girls 4 Pcs Combo Stylish Waist Belt For Dresses Jeans (16071Lb)
+                            </p>
+                        </div>
+                        <p class="product-price text-muted mb-0 px-1 ms-3 ">₹521</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center my-5 pb-3">
+            <button class="load-more-btn">LOAD MORE</button>
+        </div>
+        <footer class="bg-dark text-white pt-5 pb-3">
+            <div class="container">
+                <div class="row text-start">
+                    <div class="col-6 col-md-3 mb-4">
+                        <h6 class="fw-bold text-uppercase">Categories</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="text-white-50 text-decoration-none">Women</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white-50 text-decoration-none">Men</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white-50 text-decoration-none">Shoes</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white-50 text-decoration-none">Watches</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4">
+                        <h6 class="fw-bold text-uppercase">Help</h6>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#" class="text-white-50 text-decoration-none">Track Order</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white-50 text-decoration-none">Returns</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white-50 text-decoration-none">Shipping</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-white-50 text-decoration-none">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 mb-4">
+                        <h6 class="fw-bold text-uppercase">Get In Touch</h6>
+                        <p class="text-white-50">
+                            Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-white">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-white">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-white">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 mb-4">
+                        <h6 class="fw-bold text-uppercase">Newsletter</h6>
+                        <form class="d-flex flex-column gap-2">
+                            <input type="email" class="form-control bg-dark text-white border-bottom rounded-0" placeholder="email@example.com">
+                            <button type="submit" class="btn btn-primary rounded-pill fw-bold">
+                                SUBSCRIBE
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center my-3">
+                    <img
+                        src="static\images\icons\icon-pay-01.png"
+                        alt="Payment Methods"
+                        class="img-fluid"
+                        style="max-width: 250px;"
+                    >
+                    <img
+                        src="static\images\icons\icon-pay-02.png"
+                        alt="Payment Methods"
+                        class="img-fluid"
+                        style="max-width: 250px;"
+                    >
+                    <img
+                        src="static\images\icons\icon-pay-03.png"
+                        alt="Payment Methods"
+                        class="img-fluid"
+                        style="max-width: 250px;"
+                    >
+                    <img
+                        src="static\images\icons\icon-pay-04.png"
+                        alt="Payment Methods"
+                        class="img-fluid"
+                        style="max-width: 250px;"
+                    >
+                    <img
+                        src="static\images\icons\icon-pay-05.png"
+                        alt="Payment Methods"
+                        class="img-fluid"
+                        style="max-width: 250px;"
+                    >
+                </div>
+                <div class="text-center text-white-50 small">
+                    Copyright @2025 All rights reserved
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Quick View Modal -->
+        <div
+            class="modal fade"
+            id="quickViewModal"
+            tabindex="-1"
+            aria-labelledby="quickViewLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content p-4">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">
+                            Product Title
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!-- Image + thumbnails -->
+                            <div class="col-md-6 text-center">
+                                <img
+                                    id="modalMainImg"
+                                    src
+                                    class="img-fluid mb-3"
+                                    alt="Main Product"
+                                >
+                                <div id="modalThumbs" class="d-flex justify-content-center flex-wrap"></div>
+                            </div>
+                            <!-- Details -->
+                            <div class="col-md-6">
+                                <h4 id="modalPrice" class="text-success mb-3">₹0</h4>
+                                <div class="mb-3">
+                                    <h6 class="fw-bold">Product Details :</h6>
+                                    <div id="modalDetails" class="mb-3 text-muted" style="white-space: pre-line;"></div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="modalSize" class="form-label fw-bold">Size</label>
+                                    <select class="form-select" id="modalSize">
+                                        <option selected disabled>
+                                            Select
+                                            size
+                                        </option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="modalQty" class="form-label fw-bold">Quantity</label>
+                                    <input
+                                        type="number"
+                                        id="modalQty"
+                                        class="form-control"
+                                        value="1"
+                                        min="1"
+                                    >
+                                </div>
+                                <!-- Inside your modal -->
+                                <button id="modalAddToCart" class="btn btn-primary w-100">
+                                    Add to
+                                    Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+    function updateCartCount() {
+        const username = localStorage.getItem('loggedInUser');
+        if (!username) return;
+
+        const cartKey = `cart_${username}`;
+        const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+        let totalItems = 0;
+        cart.forEach(item => {
+            totalItems += item.quantity;
+        });
+
+        const cartCountElement = document.getElementById('cartCount');
+        if (cartCountElement) {
+            cartCountElement.textContent = totalItems;
+            cartCountElement.style.display = totalItems > 0 ? 'inline-block' : 'none';
+        }
+    }
+
+    function updateWishlistCount() {
+        const username = localStorage.getItem('loggedInUser');
+        if (!username) return;
+
+        const wishlistKey = `wishlist_${username}`;
+        const wishlist = JSON.parse(localStorage.getItem(wishlistKey)) || [];
+
+        const countSpan = document.getElementById("wishlistCount");
+        if (countSpan) countSpan.textContent = wishlist.length;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const username = localStorage.getItem("loggedInUser");
+
+        updateCartCount();
+        updateWishlistCount();
+
+        // 1. Quick view modal logic
+        document.querySelectorAll('.quick-view-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const card = this.closest('.product-card');
+                const title = card.dataset.title;
+                const price = card.dataset.price;
+                const mainImg = card.dataset.mainImg;
+                const thumbs = JSON.parse(card.dataset.thumbs);
+                const details = JSON.parse(card.dataset.details);
+
+                document.getElementById('modalTitle').textContent = title;
+                document.getElementById('modalPrice').textContent = price;
+                document.getElementById('modalMainImg').src = mainImg;
+
+                const thumbsContainer = document.getElementById('modalThumbs');
+                thumbsContainer.innerHTML = '';
+                thumbs.forEach(src => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.className = 'img-thumbnail m-1';
+                    img.style.cursor = 'pointer';
+                    img.style.width = '60px';
+                    img.onclick = () => {
+                        document.getElementById('modalMainImg').src = src;
+                    };
+                    thumbsContainer.appendChild(img);
+                });
+
+                const detailsContainer = document.getElementById('modalDetails');
+                detailsContainer.innerHTML = '';
+                details.forEach(line => {
+                    const p = document.createElement('p');
+                    p.className = 'mb-1';
+                    p.innerHTML = `<strong>${line}</strong>`;
+                    detailsContainer.appendChild(p);
+                });
+
+                new bootstrap.Modal(document.getElementById('quickViewModal')).show();
+            });
+        });
+
+        // 2. Add to cart logic
+        const addToCartBtn = document.getElementById('modalAddToCart');
+        if (addToCartBtn) {
+            addToCartBtn.addEventListener('click', function () {
+                if (!username) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Please log in to add items to your cart.',
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                    return;
+                }
+
+                const title = document.getElementById('modalTitle').textContent;
+                const price = document.getElementById('modalPrice').textContent;
+                const image = document.getElementById('modalMainImg').src;
+                const size = document.getElementById('modalSize').value;
+                const quantity = parseInt(document.getElementById('modalQty').value);
+
+                if (!size || size === 'Select size') {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Please select a size.',
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                    return;
+                }
+
+                const product = { title, price, image, size, quantity };
+                const cartKey = `cart_${username}`;
+                let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+                const existing = cart.find(item => item.title === title && item.size === size);
+                if (existing) {
+                    existing.quantity += quantity;
+                } else {
+                    cart.push(product);
+                }
+
+                localStorage.setItem(cartKey, JSON.stringify(cart));
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Added to cart!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
+                const modal = bootstrap.Modal.getInstance(document.getElementById('quickViewModal'));
+                if (modal) modal.hide();
+
+                setTimeout(updateCartCount, 100);
+            });
+        } else {
+            console.error("Button with id 'modalAddToCart' not found in DOM!");
+        }
+
+        // 3. Wishlist color update on load
+        if (username) {
+            const wishlistKey = `wishlist_${username}`;
+            const wishlist = JSON.parse(localStorage.getItem(wishlistKey)) || [];
+
+            document.querySelectorAll(".heart-btn").forEach((btn) => {
+                const card = btn.closest(".product-card");
+                const title = card.dataset.title;
+
+                const exists = wishlist.some(item => item.title === title);
+                if (exists) {
+                    btn.classList.add("active");
+                }
+
+                btn.addEventListener("click", function () {
+                    if (!username) {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'Please log in to add items to your wishlist.',
+                            showConfirmButton: false,
+                            timer: 2000
+                        });
+                        return;
+                    }
+
+                    const card = this.closest(".product-card");
+                    const title = card.dataset.title;
+                    const price = card.dataset.price;
+                    const img = card.dataset.mainImg;
+
+                    let wishlist = JSON.parse(localStorage.getItem(wishlistKey)) || [];
+
+                    const exists = wishlist.some(item => item.title === title);
+                    if (exists) {
+                        Swal.fire({
+                            icon: 'info',
+                            title: 'Already in wishlist.',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        return;
+                    }
+
+                    wishlist.push({ title, price, img });
+                    localStorage.setItem(wishlistKey, JSON.stringify(wishlist));
+                    this.classList.add("active");
+
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Added to wishlist!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+
+                    updateWishlistCount();
+                });
+            });
+        }
+    });
+
+    // Store logged-in user in localStorage
+    const usernameFromServer = "{{ user }}";
+    if (usernameFromServer) {
+        localStorage.setItem("loggedInUser", usernameFromServer);
+        console.log("User stored in localStorage:", usernameFromServer);
+    }
+        </script>
+    </body>
+</html>
